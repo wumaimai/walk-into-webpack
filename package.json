@@ -1,5 +1,7 @@
 {
   "name": "webpack-demo",
+  "main": "dist/webpack-numbers.js",
+  "module": "src/index.js",
   "sideEffects": false,
   "version": "1.0.0",
   "description": "",

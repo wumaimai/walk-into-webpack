@@ -5,14 +5,9 @@ function component () {
   var button = document.createElement('button')
   var br = document.createElement('br')
 
-  button.innerHTML = 'Click me and look at the console!'
+  button.innerHTML = _.join(['hello', 'world3333'], ' ')
   element.appendChild(br)
   element.appendChild(button)
-
-  button.onclick = e => import(/* webpackChunkName: "print" */ './print').then(module => {
-    var print = module.default
-    print()
-  })
 
   return element
 }

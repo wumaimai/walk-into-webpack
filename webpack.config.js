@@ -6,29 +6,28 @@ module.exports = {
   entry: {
     index: './src/index.js'
   },
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+      cacheGroups: {
+        lib: {
+          name: 'chunk-libs',
+          test: / [\\/]node_modules[\\/]/,
+          priority: 10,
+          chunks: 'initial'
+        }
+      }
+    },
+    runtimeChunk: true
+  },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Code Splitting',
+      title: 'Caching',
     }),
   ],
-  // optimization: {
-  //   splitChunks: {
-  //     chunks: 'all',
-  //     cacheGroups: {
-  //       libs: {
-  //         name: 'chunk-libs',
-  //         test: /[\\/]node_modules[\\/]/,
-  //         priority: 10,
-  //         chunks: "initial",
-  //       }
-  //     }
-  //   },
-  //   runtimeChunk: true
-  // },
   output: {
-    filename: '[name].bundle.js',
-    chunkFilename: '[name].bundle.js',
+    filename: '[name].[chunkhash].js',
     path: path.resolve(__dirname, 'dist'),
   },
 }

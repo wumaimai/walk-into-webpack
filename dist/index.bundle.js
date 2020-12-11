@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],[,function(n,e){var o;document.body.appendChild(((o=document.createElement("pre")).innerHTML=["Hello webpack!"].join("\n\n"),o))}],[[1,4]]]);

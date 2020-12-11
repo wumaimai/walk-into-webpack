@@ -1,12 +1,3 @@
-@font-face {
-  font-family: 'MFLiHei_Noncommercial-Regular';
-  src: url('./MFLiHei_Noncommercial-Regular.otf');
-  font-style: normal;
-  font-weight: 600;
-}
-
-.hello {
-  color: red;
-  font-family: 'MFLiHei_Noncommercial-Regular';
-  background: url('./blue-d.png');
+body{
+  background: red;
 }
